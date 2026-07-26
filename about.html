@@ -17,14 +17,29 @@
     </header>
 
     <main>
-        <!-- Hero Section: Replaces the previous About content with a homepage-style hero -->
+        <!-- Hero Section: Home Page layout content for About page -->
         <section class="hero about-hero">
             <div class="hero-background" aria-hidden="true">
-                <!-- Use the SVG placeholders added to /images/ -->
-                <img src="images/high-rise.svg" alt="High-rise buildings" class="bg-image bg-1">
-                <img src="images/blueprints.svg" alt="Structural blueprints" class="bg-image bg-2">
-                <img src="images/engineers.svg" alt="Engineers at work" class="bg-image bg-3">
-                <img src="images/construction.svg" alt="Steel and RCC construction" class="bg-image bg-4">
+                <!-- Prefer WEBP sources for modern browsers, fall back to local SVGs if external images blocked -->
+                <picture>
+                    <source type="image/webp" srcset="https://images.unsplash.com/photo-1505691723518-36a0b9f3fa8b?auto=format&fit=crop&w=2000&q=80&fm=webp">
+                    <img src="images/high-rise.svg" alt="High-rise buildings" class="bg-image bg-1">
+                </picture>
+
+                <picture>
+                    <source type="image/webp" srcset="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=2000&q=80&fm=webp">
+                    <img src="images/blueprints.svg" alt="Structural blueprints" class="bg-image bg-2">
+                </picture>
+
+                <picture>
+                    <source type="image/webp" srcset="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=2000&q=80&fm=webp">
+                    <img src="images/engineers.svg" alt="Engineers at work" class="bg-image bg-3">
+                </picture>
+
+                <picture>
+                    <source type="image/webp" srcset="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=80&fm=webp">
+                    <img src="images/construction.svg" alt="Steel and RCC construction" class="bg-image bg-4">
+                </picture>
             </div>
 
             <div class="hero-overlay" aria-hidden="true"></div>
