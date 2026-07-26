@@ -4,7 +4,11 @@
    Accent (Steel Blue): #1E88E5
    Background: #FFFFFF
    Text: #333333
+   Updated: Added Google Fonts (Poppins & Open Sans) and typography variables
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@700&display=swap');
+
 :root {
   --color-primary: #0B3C5D; /* Navy Blue */
   --color-accent:  #1E88E5; /* Steel Blue */
@@ -12,18 +16,31 @@
   --color-text: #333333; /* Dark Grey */
   --color-muted: #666666;
   --max-width: 1100px;
+
+  /* Typography */
+  --font-heading: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-body: 'Open Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-body);
   background: var(--color-background);
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
+}
+
+/* Headings use Poppins Bold */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
 }
 
 a { color: var(--color-accent); text-decoration: none; }
