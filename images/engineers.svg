@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#2d6a4f" />
+  <!-- simple engineer icons (circles and lines) -->
+  <g transform="translate(300,220)" fill="#d8f3dc">
+    <circle cx="120" cy="80" r="64" />
+    <rect x="80" y="160" width="80" height="140" rx="10" />
+  </g>
+  <g transform="translate(800,200)" fill="#d8f3dc">
+    <circle cx="120" cy="80" r="64" />
+    <rect x="80" y="160" width="80" height="180" rx="10" />
+  </g>
+  <text x="50%" y="88%" font-family="Open Sans, Arial" font-size="36" fill="#d8f3dc" text-anchor="middle">Engineers at work</text>
+</svg>
