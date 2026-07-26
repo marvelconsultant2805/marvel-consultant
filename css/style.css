@@ -1,0 +1,97 @@
+/* css/style.css
+   Added color variables and basic site styles using:
+   Primary (Navy Blue): #0B3C5D
+   Accent (Steel Blue): #1E88E5
+   Background: #FFFFFF
+   Text: #333333
+*/
+:root {
+  --color-primary: #0B3C5D; /* Navy Blue */
+  --color-accent:  #1E88E5; /* Steel Blue */
+  --color-background: #FFFFFF; /* White */
+  --color-text: #333333; /* Dark Grey */
+  --color-muted: #666666;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+a { color: var(--color-accent); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+
+header {
+  background: linear-gradient(90deg, var(--color-primary) 0%, rgba(11,60,93,0.95) 100%);
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+header h1 { margin: 0; font-size: 1.4rem; }
+
+nav { margin-top: 0.5rem; }
+nav a { color: rgba(255,255,255,0.95); margin-right: 1rem; }
+nav a:hover { color: var(--color-accent); }
+
+main { padding: 2rem 1.5rem; max-width: var(--max-width); margin: 0 auto; }
+
+/* Hero */
+.about-hero {
+  background: linear-gradient(180deg, rgba(11,60,93,0.04), rgba(30,136,229,0.02));
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+.about-hero h2 { margin-top: 0; color: var(--color-primary); font-size: 2rem; }
+.about-hero p { color: var(--color-muted); margin-top: 0.5rem; }
+
+h3 { color: var(--color-primary); }
+
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.4rem; color: var(--color-text); }
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: filter 150ms ease, transform 150ms ease;
+}
+.cta-button:hover, .cta-button:focus {
+  filter: brightness(0.94);
+  transform: translateY(-1px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+  color: var(--color-muted);
+  margin-top: 2rem;
+}
+
+/* Accessibility focus styles */
+:focus-visible {
+  outline: 3px solid rgba(30,136,229,0.25);
+  outline-offset: 2px;
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+  header h1 { font-size: 1.6rem; }
+  .about-hero h2 { font-size: 2.4rem; }
+  main { padding: 3rem 2rem; }
+}
